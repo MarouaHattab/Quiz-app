@@ -2,7 +2,8 @@
 
 A beautiful and interactive quiz application built with HTML, CSS, and JavaScript!
 
-🌐 **Live Demo**: [https://quiz-app-pink-ten-99.vercel.app/](https://quiz-app-pink-ten-99.vercel.app/)
+🌐 **Live Demo**: ![Demo](demo.gif)
+
 
 ## 📝 Description
 
