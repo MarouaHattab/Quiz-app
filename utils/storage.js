@@ -1,16 +1,12 @@
 const STORAGE_KEYS = {
-    QUIZ_HISTORY: 'quizHistory',
-    USER_PREFERENCES: 'userPreferences'
+    QUIZ_HISTORY: 'quizHistory'
 };
 
 function saveQuizResult(result) {
     try {
         const existingResults = getQuizHistory();
         existingResults.push(result);
-        
-        // Sort by timestamp (newest first)
         existingResults.sort((a, b) => b.timestamp - a.timestamp);
-        
         localStorage.setItem(STORAGE_KEYS.QUIZ_HISTORY, JSON.stringify(existingResults));
         return true;
     } catch (error) {
@@ -39,57 +35,6 @@ function clearQuizHistory() {
     }
 }
 
-function getQuizHistoryByTopic(topic) {
-    try {
-        const allHistory = getQuizHistory();
-        return allHistory.filter(result => result.topic.toLowerCase() === topic.toLowerCase());
-    } catch (error) {
-        console.error('Error getting quiz history by topic:', error);
-        return [];
-    }
-}
-
-function getLatestQuizResult() {
-    try {
-        const history = getQuizHistory();
-        return history.length > 0 ? history[0] : null;
-    } catch (error) {
-        console.error('Error getting latest quiz result:', error);
-        return null;
-    }
-}
-
-function saveUserPreferences(preferences) {
-    try {
-        localStorage.setItem(STORAGE_KEYS.USER_PREFERENCES, JSON.stringify(preferences));
-        return true;
-    } catch (error) {
-        console.error('Error saving user preferences:', error);
-        return false;
-    }
-}
-
-function getUserPreferences() {
-    try {
-        const preferences = localStorage.getItem(STORAGE_KEYS.USER_PREFERENCES);
-        return preferences ? JSON.parse(preferences) : {};
-    } catch (error) {
-        console.error('Error getting user preferences:', error);
-        return {};
-    }
-}
-
-function isLocalStorageAvailable() {
-    try {
-        const test = 'localStorage-test';
-        localStorage.setItem(test, test);
-        localStorage.removeItem(test);
-        return true;
-    } catch (error) {
-        return false;
-    }
-}
-
 function formatDateForStorage() {
     const currentDate = new Date();
     return currentDate.toLocaleDateString('en-US', {
@@ -108,17 +53,11 @@ function createQuizResult(topic, score, totalQuestions) {
     };
 }
 
-// Export functions (make them available globally)
 if (typeof window !== 'undefined') {
     window.StorageHelper = {
         saveQuizResult,
         getQuizHistory,
         clearQuizHistory,
-        getQuizHistoryByTopic,
-        getLatestQuizResult,
-        saveUserPreferences,
-        getUserPreferences,
-        isLocalStorageAvailable,
         formatDateForStorage,
         createQuizResult,
         STORAGE_KEYS
