@@ -1,0 +1,72 @@
+/* ===========================================
+   GLOBAL STYLES & RESET
+   =========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: #0d1117;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 107, 107, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(79, 172, 254, 0.2) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1117 0%,
+      #161b22 25%,
+      #21262d 50%,
+      #161b22 75%,
+      #0d1117 100%
+    );
+  min-height: 100vh;
+  color: #f0f6fc;
+  line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(79, 172, 254, 0.03) 2px,
+      rgba(79, 172, 254, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(79, 172, 254, 0.03) 2px,
+      rgba(79, 172, 254, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

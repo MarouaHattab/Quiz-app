@@ -1,0 +1,160 @@
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .title-emoji {
+    font-size: 3rem;
+  }
+
+  .quick-stats {
+    gap: 1rem;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .history-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .history-header h1 {
+    font-size: 2rem;
+  }
+
+  .history-stats {
+    gap: 1rem;
+  }
+
+  .quiz-history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .notification {
+    right: 10px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .quiz-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .quiz-progress {
+    margin: 0;
+    width: 100%;
+  }
+
+  .quiz-controls {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .results-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .answer-option {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .question-card {
+    padding: 2rem;
+  }
+
+  .question-text {
+    font-size: 1.3rem;
+  }
+
+  .results-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .results-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .results-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .history-container,
+  .quiz-container {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .title-emoji {
+    font-size: 2.5rem;
+  }
+
+  .quiz-card {
+    padding: 1.5rem;
+  }
+
+  .stat-card {
+    min-width: 120px;
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .question-card {
+    padding: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 1.2rem;
+  }
+
+  .results-card {
+    padding: 2rem;
+  }
+
+  .results-score {
+    font-size: 3rem;
+  }
+
+  .answer-options {
+    gap: 1rem;
+  }
+
+  .answer-option {
+    padding: 1rem;
+    min-height: 50px;
+  }
+}

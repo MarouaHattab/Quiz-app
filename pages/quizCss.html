@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="quiz-topic" content="css" />
+    <title>Quiz - CSS</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/quiz.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="quiz-content">
+        <div class="question-card">
+          <div class="question-number" id="questionNumber">
+            Question 1 of 10
+          </div>
+
+          <div class="question-text" id="questionText">No question</div>
+
+          <div class="answer-options" id="optionsContainer">
+            <button class="answer-option" data-value="0">
+              <span class="option-text">Response 1</span>
+            </button>
+
+            <button class="answer-option" data-value="1">
+              <span class="option-text">Response 2</span>
+            </button>
+
+            <button class="answer-option" data-value="2">
+              <span class="option-text">Response 3</span>
+            </button>
+
+            <button class="answer-option" data-value="3">
+              <span class="option-text">Response 4</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-controls">
+        <div class="control-buttons">
+          <button class="btn btn-primary" id="nextBtn" disabled>Next →</button>
+          
+          <button class="btn btn-primary" id="submitBtn" style="display: none">
+            🏆 Submit Quiz
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="results-container"
+        id="resultsContainer"
+        style="display: none"
+      >
+        <div class="results-card">
+          <div class="results-header">
+            <h1>🎉 Quiz Completed!</h1>
+          </div>
+
+          <div class="score-message">
+            <h2 id="scoreMessage">You scored 8 out of 10!</h2>
+          </div>
+
+          <div class="results-actions">
+            <button
+              class="btn btn-primary"
+              onclick="location.href='index.html'"
+            >
+              🏠 Back to Home
+            </button>
+            <button class="btn btn-outline" onclick="location.reload()">
+              🔄 Retake Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    <script src="../utils/storage.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/quiz.js"></script>
+  </body>
+</html>

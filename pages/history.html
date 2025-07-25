@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📊 Quiz Score History</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/history.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="history-container">
+      <div class="history-header">
+        
+        <h1>🎯 Quiz Score History</h1>
+      </div>
+
+      <div class="history-content">
+        <div id="historyByTopic">
+          <div class="quiz-history-section">
+            <h2>
+              <span class="quiz-section-icon">🌐</span>
+              HTML Quiz
+            </h2>
+            <div id="htmlQuizHistory">
+              <div class="no-history">No history found</div>
+            </div>
+          </div>
+
+          <div class="quiz-history-section">
+            <h2>
+              <span class="quiz-section-icon">🎨</span>
+              CSS Quiz
+            </h2>
+            <div id="cssQuizHistory">
+              <div class="no-history">No history found</div>
+            </div>
+          </div>
+
+          <div class="quiz-history-section">
+            <h2>
+              <span class="quiz-section-icon">⚡</span>
+              JavaScript Quiz
+            </h2>
+            <div id="javascriptQuizHistory">
+              <div class="no-history">No history found</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="history-actions">
+          <button class="btn btn-danger" id="clearAllHistory">
+            🗑️ Clear All History
+          </button>
+          <button class="btn btn-outline" onclick="location.href='../index.html'">
+            🏠 Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../utils/storage.js"></script>
+    <script src="../assets/js/history.js"></script>
+  </body>
+</html>
